@@ -14,14 +14,16 @@ class CharactersActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_characters)
         val list: RecyclerView = findViewById(R.id.list)
-        val adapter: CharactersAdapter = CharactersAdapter()
+        val adapter = CharactersAdapter() { item, position ->
+            showDetails()
+        }
 
         list.layoutManager = LinearLayoutManager(this)
         list.adapter = adapter
         val characters: MutableList<Character> = CharactersRepo.character
         adapter.setCharacters(characters)
     }
-    fun showDetails(button: View) {
+    fun showDetails() {
         val intent: Intent = Intent(this, DetailActivity::class.java)
         startActivity(intent)
     }
