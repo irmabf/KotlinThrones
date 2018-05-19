@@ -33,7 +33,7 @@ class DetailActivity : AppCompatActivity() {
 
 
         button.setOnClickListener{
-            Toast.makeText(this@DetailActivity, character?.house?.name, Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@DetailActivity, character?.house?.words, Toast.LENGTH_SHORT).show()
         }
     }
 }
