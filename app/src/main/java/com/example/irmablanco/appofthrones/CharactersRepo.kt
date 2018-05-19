@@ -2,14 +2,11 @@ package com.example.irmablanco.appofthrones
 
 object CharactersRepo {
     val character: MutableList<Character> = mutableListOf()
-
     get() {
         if (field.isEmpty())
             field.addAll(dummyCharacters())
-
         return  field
     }
-
     private  fun dummyCharacters(): MutableList<Character> {
 
         return (1..10).map {
@@ -23,7 +20,7 @@ object CharactersRepo {
         return Character(
                 name = "Personaje ${int}",
                 title = "Título ${int}",
-                born = "Nació en ${int}",
+                born = "Naci en ${int}",
                 actor = "Actor ${int}",
                 quote = "Frase ${int}",
                 father = "Padre ${int}",
