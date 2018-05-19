@@ -18,7 +18,7 @@ class CharactersActivity: AppCompatActivity() {
     }
     val adapter: CharactersAdapter by lazy {
         val adapter = CharactersAdapter { item, position ->
-            showDetails()
+            showDetails(item.id)
         }
         adapter
     }
@@ -29,8 +29,9 @@ class CharactersActivity: AppCompatActivity() {
         val characters: MutableList<Character> = CharactersRepo.character
         adapter.setCharacters(characters)
     }
-    fun showDetails() {
+    fun showDetails(characterId: String) {
         val intent: Intent = Intent(this, DetailActivity::class.java)
+        intent.putExtra("key_id", characterId)
         startActivity(intent)
     }
 }

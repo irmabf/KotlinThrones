@@ -15,11 +15,13 @@
         android:text="Personaje"/>
 
     <TextView
+        android:id="@+id/labelName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Jon Snow"/>
     <TextView
+        android:id="@+id/labelTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lord Comandante de la Guardia de la noche"
@@ -27,22 +29,33 @@
         android:textStyle="italic"/>
 
     <TextView
+        android:id="@+id/labelBorn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="283 ac"/>
     <TextView
+        android:id="@+id/labelActor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Kit Harington"/>
 
     <TextView
+        android:id="@+id/labelQuote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="I know nothing"/>
+
+    <TextView
+        android:id="@+id/labelParents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Ned Stark"/>
     <TextView
+        android:id="@+id/labelSpouse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
