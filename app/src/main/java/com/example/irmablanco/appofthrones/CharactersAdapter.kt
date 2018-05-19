@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import  android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
 class CharactersAdapter:RecyclerView.Adapter<CharactersAdapter.CharacterViewHolder>() {
 
@@ -21,7 +22,17 @@ class CharactersAdapter:RecyclerView.Adapter<CharactersAdapter.CharacterViewHold
     override fun getItemCount(): Int {
         return items.size
     }
+
+    fun setCharacters(characters: MutableList<Character>){
+        items.clear()
+        items.addAll(characters)
+        notifyDataSetChanged()
+    }
     inner class CharacterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var character: Character? = null
+        set(value) {
+            itemView.findViewById<TextView>(R.id.label_name).text = value?.name
+            field = value
+        }
     }
 }

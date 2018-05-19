@@ -17,7 +17,9 @@ class CharactersActivity: AppCompatActivity() {
         val adapter: CharactersAdapter = CharactersAdapter()
 
         list.layoutManager = LinearLayoutManager(this)
+        list.adapter = adapter
         val characters: MutableList<Character> = CharactersRepo.character
+        adapter.setCharacters(characters)
     }
     fun showDetails(button: View) {
         val intent: Intent = Intent(this, DetailActivity::class.java)
