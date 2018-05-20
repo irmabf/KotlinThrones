@@ -24,7 +24,7 @@ class CharactersFragment: Fragment() {
     }
     /*Necesitamos implementar una variable que servirá para decir la instancia con la que está conectado el fragmento*/
     //creamos la variable clickListener que va a ser la instancia de OnItemClickListener
-    var clickListener: OnItemClickListener? = null
+    lateinit  var clickListener: OnItemClickListener
 
     //Ahora tenemos que sobrescribir el método onAttach, pues es el primero que se ejecuta en el ciclo de vida de un fragmento
     /*Vemos que onAttach viene con un contexto como argumento, ese contexto va a ser la actividad,
