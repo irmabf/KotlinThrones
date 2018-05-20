@@ -16,10 +16,14 @@ class CharactersActivity: AppCompatActivity() {
         setContentView(R.layout.activity_characters)
         //Creo la instancia del fragmento
         val fragment = CharactersFragment()
-        this.supportFragmentManager
-                .beginTransaction()
-                .add(R.id.listContainer, fragment)
-                .commit()
+
+        if (savedInstanceState == null){
+            this.supportFragmentManager
+                    .beginTransaction()
+                    .add(R.id.listContainer, fragment)
+                    .commit()
+        }
+
     }
 
 }
