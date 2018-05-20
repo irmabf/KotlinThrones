@@ -16,7 +16,7 @@ class DetailActivity : AppCompatActivity() {
 
         val id = intent.getStringExtra("key_id")
         val character = CharactersRepo.findCharacterById(id)
-        val button: Button = findViewById(R.id.button)
+        //val button: Button = findViewById(R.id.button)
 
        character?.let {
            with(character){
