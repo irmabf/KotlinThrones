@@ -3,12 +3,6 @@ package com.example.irmablanco.appofthrones
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.util.Log
-import android.view.View
-import android.widget.AdapterView
-import android.widget.Button
 import kotlinx.android.synthetic.main.activity_characters.*
 class CharactersActivity: AppCompatActivity(), CharactersFragment.OnItemClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,10 +21,20 @@ class CharactersActivity: AppCompatActivity(), CharactersFragment.OnItemClickLis
     }
 //La clase implementa este metodo de la interfaz OnItemClickListenr
     override fun onItemClicked(character: Character) {
-        showDetails(character.id)
+        //Si la vista de detalle está disponible:
+       if (isDetailViewAvailable())
+       //Para poder mostrar los fragmentos de ese detalle tenemos que pasar el id del character
+           showFragmentDetails(character.id)
+       else
+           launchDetailActivity(character.id)
     }
+    //funcion para comprobar si la vista de detalle está disponible
+    private fun isDetailViewAvailable() = detailContainer != null
 
-    fun showDetails(characterId: String) {
+    private fun showFragmentDetails(characterId: String) {
+
+    }
+    fun launchDetailActivity(characterId: String) {
         val intent: Intent = Intent(this, DetailActivity::class.java)
         intent.putExtra("key_id", characterId)
         startActivity(intent)
