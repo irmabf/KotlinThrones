@@ -8,30 +8,18 @@ import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.View
 import android.widget.Button
-
+import kotlinx.android.synthetic.main.activity_characters.*
 class CharactersActivity: AppCompatActivity() {
 
-    val list: RecyclerView by lazy {
-        val list: RecyclerView = findViewById(R.id.list)
-        list.layoutManager = LinearLayoutManager(this)
-        list
-    }
-    val adapter: CharactersAdapter by lazy {
-        val adapter = CharactersAdapter { item, position ->
-            showDetails(item.id)
-        }
-        adapter
-    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_characters)
-        list.adapter = adapter
-        val characters: MutableList<Character> = CharactersRepo.character
-        adapter.setCharacters(characters)
+        //Creo la instancia del fragmento
+        val fragment = CharactersFragment()
+        this.supportFragmentManager
+                .beginTransaction()
+                .add(R.id.listContainer, fragment)
+                .commit()
     }
-    fun showDetails(characterId: String) {
-        val intent: Intent = Intent(this, DetailActivity::class.java)
-        intent.putExtra("key_id", characterId)
-        startActivity(intent)
-    }
+
 }
