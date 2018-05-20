@@ -7,10 +7,10 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.View
+import android.widget.AdapterView
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_characters.*
-class CharactersActivity: AppCompatActivity() {
-
+class CharactersActivity: AppCompatActivity(), CharactersFragment.OnItemClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_characters)
@@ -25,5 +25,10 @@ class CharactersActivity: AppCompatActivity() {
         }
 
     }
+//La clase implementa este metodo de la interfaz OnItemClickListenr
+    override fun onItemClicked(character: Character) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
 
 }
