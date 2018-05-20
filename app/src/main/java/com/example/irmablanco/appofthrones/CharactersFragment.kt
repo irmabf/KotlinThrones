@@ -18,7 +18,7 @@ class CharactersFragment: Fragment() {
     }
     val adapter: CharactersAdapter by lazy {
         val adapter = CharactersAdapter { item, position ->
-            showDetails(item.id)
+            clickListener.onItemClicked(item)
         }
         adapter
     }
@@ -50,11 +50,7 @@ class CharactersFragment: Fragment() {
         adapter.setCharacters(characters)
     }
 
-    fun showDetails(characterId: String) {
-        val intent: Intent = Intent(context, DetailActivity::class.java)
-        intent.putExtra("key_id", characterId)
-        startActivity(intent)
-    }
+
     //Aquí definimos una especie de protocolo, un comportamiento que una clase puede implementar
     //este comportamiento sera implementado por la clase CharactersActivity
     interface OnItemClickListener {

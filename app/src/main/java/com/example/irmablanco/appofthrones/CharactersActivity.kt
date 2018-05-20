@@ -27,8 +27,13 @@ class CharactersActivity: AppCompatActivity(), CharactersFragment.OnItemClickLis
     }
 //La clase implementa este metodo de la interfaz OnItemClickListenr
     override fun onItemClicked(character: Character) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        showDetails(character.id)
     }
 
+    fun showDetails(characterId: String) {
+        val intent: Intent = Intent(this, DetailActivity::class.java)
+        intent.putExtra("key_id", characterId)
+        startActivity(intent)
+    }
 
 }
