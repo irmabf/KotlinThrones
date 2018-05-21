@@ -1,6 +1,6 @@
 package com.example.irmablanco.appofthrones
 
-import android.app.Fragment
+import android.support.v4.app.Fragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,9 +22,9 @@ class DetailFragment: Fragment() {
         return inflater.inflate(R.layout.fragment_detail, container, false)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val id = arguments.getString("key_id")
+        val id = arguments?.getString("key_id")
     }
 }
