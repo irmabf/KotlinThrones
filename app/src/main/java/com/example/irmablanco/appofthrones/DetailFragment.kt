@@ -5,7 +5,9 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.fragment_detail.*
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_detail.*
+
 //Tenemos que conectar fragment detail con detailfragment, tenemos que sobrescribir primero a onCreateView, e incfar la vista xml fragment_detail*******101
 class DetailFragment: Fragment() {
     companion object {
@@ -35,6 +37,22 @@ class DetailFragment: Fragment() {
 
         val id = arguments?.getString("key_id")
         val character = CharactersRepo.findCharacterById(id)
+
+        character?.let {
+            with(character){
+                labelName.text = name
+                labelTitle.text = title
+                labelActor.text = actor
+                labelBorn.text = born
+                labelParents.text = "${father} & ${mother}"
+                labelQuote.text = quote
+                labelSpouse.text = spouse
+                button.text = house.name
+            }
+        }
+        button.setOnClickListener{
+            Toast.makeText(context, character?.house?.words, Toast.LENGTH_SHORT).show()
+        }
 
 
     }

@@ -2,11 +2,9 @@ package com.example.irmablanco.appofthrones
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.Toast
 
 import kotlinx.android.synthetic.main.activity_detail.*
-import kotlinx.android.synthetic.main.item_character.*
 
 class DetailActivity : AppCompatActivity() {
 

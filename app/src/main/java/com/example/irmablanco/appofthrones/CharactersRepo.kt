@@ -16,7 +16,7 @@ object CharactersRepo {
 
         }.toMutableList()
     }
-    fun findCharacterById(id: String): Character? {
+    fun findCharacterById(id: String?): Character? {
         return character.find { character  ->
             character.id == id
         }
