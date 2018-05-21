@@ -6,14 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
-
 <TextView
     android:textSize="18sp"
     android:textStyle="bold"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Personaje"/>
-
 <TextView
     android:id="@+id/labelName"
     android:layout_width="match_parent"
@@ -24,10 +22,9 @@
     android:id="@+id/labelTitle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:text="Lord Comandante de la Guardia de la noche"
     android:layout_marginTop="4dp"
-    android:textStyle="italic"/>
-
+    android:textStyle="italic"
+    tools:text="Lord Comandante de la Guardia de la noche"/>
 <TextView
     android:id="@+id/labelBorn"
     android:layout_width="match_parent"
@@ -40,14 +37,12 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="4dp"
     tools:text="Kit Harington"/>
-
 <TextView
     android:id="@+id/labelQuote"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="4dp"
     tools:text="I know nothing"/>
-
 <TextView
     android:id="@+id/labelParents"
     android:layout_width="match_parent"
@@ -60,17 +55,10 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="4dp"
     tools:text="Sin esposa"/>
-
 <Button
     android:id="@+id/button"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="16dp"
     tools:text="CASA STARK"/>
-
-
-
-
-
-
 </LinearLayout>

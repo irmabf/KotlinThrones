@@ -24,6 +24,15 @@ class CharactersFragment: Fragment() {
     }
     /*Necesitamos implementar una variable que servirá para decir la instancia con la que está conectado el fragmento*/
     //creamos la variable clickListener que va a ser la instancia de OnItemClickListener
+    /**
+     * Creamos la variable instancia de OnitemClickListener para poder conectar CharactersFragment con CharactersActivity
+     * Habría que controllar la nullabilidad diciendo
+     * var clickListener: OnItemClickListener= = null, pero utilizamos un lateinit mejor,
+     * Con la palabra  reservada lateinit indicamos que esta variable va a ser inicializada en algún punto del tiempo, sin embargo, damos por hecho
+     *que la variable no puede ser nula, con el el lateinit, nosotros nos hacemos responsables de implementar que esa inicializacion tardia se ejecute
+     * en algun punto deltiempo próximo y que ese punto del tiempo no afecte a un futuro para no tener nullpointer exception.
+     * Como en el ciclo de vida el primer método que ese ejecuta es el OnAttach, implementamos en dicho método el  middleware para la inicializacion en el meotdo OnAttach,
+     * igualando ahí el clickListener a context, es decir a algo que sea un OnItemClickListener, que  la actividad que implemente dicha interfaz*/
     lateinit  var clickListener: OnItemClickListener
 
     //Ahora tenemos que sobrescribir el método onAttach, pues es el primero que se ejecuta en el ciclo de vida de un fragmento
@@ -33,6 +42,10 @@ class CharactersFragment: Fragment() {
         super.onAttach(context)
         //Necesitamos saber si se implementa la actividad a la cual nos estamos conectando tiene la capacidad de hacer un click listener,
         //si implementa la interfaz OnItemClickListener
+        /**Si el contexto: es decir, la actividad a la cual nos estamos conectando que es CharactersActivity tiene la capacidad de manejar
+         * el OnItemClickListener -> es decir, si la actividad a la que nos estamos conectando implementa la interfaz OnItemClickListwrnr,
+         * entonces clickLister es igual a esa actividad, de lo contrario, lanzar una excepción.
+         * **/
         if (context is OnItemClickListener)
              clickListener = context
         else
