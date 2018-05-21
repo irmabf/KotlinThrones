@@ -22,13 +22,13 @@ class CharactersActivity: AppCompatActivity(), CharactersFragment.OnItemClickLis
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_characters)
         //Creo la instancia del fragmento
-        val fragment = CharactersFragment()
-
-        if (savedInstanceState == null)
+        if (savedInstanceState == null){
+            val fragment = CharactersFragment()
             this.supportFragmentManager
                     .beginTransaction()
                     .add(R.id.listContainer, fragment)
                     .commit()
+        }
     }
 /*
 * La actividad, CharactersActivity va a decidir qué hacer cuando reciba ese click,

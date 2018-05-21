@@ -24,23 +24,13 @@ class DetailActivity : AppCompatActivity() {
          *
          * */
         val id = intent.getStringExtra("key_id")
-        val character = CharactersRepo.findCharacterById(id)
-        //val button: Button = findViewById(R.id.button)
-       character?.let {
-           with(character){
-               labelName.text = name
-               labelTitle.text = title
-               labelActor.text = actor
-               labelBorn.text = born
-               labelParents.text = "${father} & ${mother}"
-               labelQuote.text = quote
-               labelSpouse.text = spouse
-               button.text = house.name
-           }
-       }
 
-        button.setOnClickListener{
-            Toast.makeText(this@DetailActivity, character?.house?.words, Toast.LENGTH_SHORT).show()
+        if (savedInstanceState == null){
+            val fragment = DetailFragment.newInstance(id)
+            supportFragmentManager
+                    .beginTransaction()
+                    .add(R.id.detailContainer, fragment)
+                    .commit()
         }
     }
 }
