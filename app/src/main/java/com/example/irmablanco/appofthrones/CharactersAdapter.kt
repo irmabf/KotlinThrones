@@ -1,5 +1,6 @@
 package com.example.irmablanco.appofthrones
 
+import android.support.v4.content.ContextCompat
 import android.support.v7.view.menu.ActionMenuItemView
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -8,7 +9,9 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.CalendarView
 import android.widget.TextView
-
+import kotlinx.android.synthetic.main.item_character.view.*
+/*Al momento que ponemos el .view.* en el import de las kotlin extensions
+* cualquier instancia de vista intenta mapearla con e layout declarado aqui**/
 class CharactersAdapter:RecyclerView.Adapter<CharactersAdapter.CharacterViewHolder> {
     constructor(): super(){
         itemClickListener = null
@@ -48,8 +51,18 @@ class CharactersAdapter:RecyclerView.Adapter<CharactersAdapter.CharacterViewHold
     inner class CharacterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var character: Character? = null
             set(value) {
-                itemView.findViewById<TextView>(R.id.label_name).text = value?.name
+                //itemView.findViewById<TextView>(R.id.label_name).text = value?.name
+                //envolvemos en un operador let para protegenernos de que sea nulo, en caso de que
+                //el character no sea nulo, se establecen los siugientes datos
+                value?.let {
+                    itemView.labelName.text = value.name
+                    itemView.labelTitle.text = value.title
+
+                    val overlayColor = House.getOverlayColor(value.house.name)
+                    itemView.imgOverlay.background = ContextCompat.getDrawable(itemView.context, overlayColor)
+                }
                 field = value
+
             }
         init {
             //Cada vez que se le de click se va a ejecutar el código que está dentro de esta lambda

@@ -1,5 +1,7 @@
 package com.example.irmablanco.appofthrones
 
+import java.util.*
+
 object CharactersRepo {
     val character: MutableList<Character> = mutableListOf()
     get() {
@@ -31,12 +33,17 @@ object CharactersRepo {
                 father = "Padre ${int}",
                 mother = "Madre ${int}",
                 spouse = "Esposa ${int}",
-                house = House(
-                        name = "Casa ${int}",
-                        region = "Region ${int}",
-                        words = "Lema ${int}"
-                )
+                house = dummyHouse()
         )
 
+    }
+
+    private  fun dummyHouse(): House {
+        val ids = arrayOf("stark", "greyjoy","lannister", "tyrell", "arryn", "baratheon", "tully")
+        val randomIdPosition = Random().nextInt(ids.size)
+
+        return House(name = ids[randomIdPosition],
+                region = "Region",
+                words = "Lema")
     }
 }
