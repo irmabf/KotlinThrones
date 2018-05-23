@@ -47,10 +47,10 @@ class DetailFragment: Fragment() {
                 labelParents.text = "${father} & ${mother}"
                 labelQuote.text = quote
                 labelSpouse.text = spouse
-                button.text = house.name
+
             }
         }
-        button.setOnClickListener{
+        btnHouse.setOnClickListener{
             Toast.makeText(context, character?.house?.words, Toast.LENGTH_SHORT).show()
         }
 

@@ -13,7 +13,8 @@
         
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="33dp">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -45,12 +46,17 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="80dp"
                 tools:text="Lord Commander of the Night´s Watch" />
         </RelativeLayout>
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/btnHouse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="5dp"
             app:fabSize="normal"
             />
 
@@ -73,7 +79,7 @@
             android:id="@+id/labelBorn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="16dp"
             tools:text="283 ac"/>
         <TextView
             android:id="@+id/labelActor"
@@ -99,12 +105,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             tools:text="Sin esposa"/>
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            tools:text="CASA STARK"/>
     </LinearLayout>
 
 </LinearLayout>
