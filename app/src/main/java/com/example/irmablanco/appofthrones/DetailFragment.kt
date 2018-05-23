@@ -55,16 +55,13 @@ class DetailFragment: Fragment() {
                 val baseColor = House.getBaseColor(character.house.name)
                 btnHouse.backgroundTintList = context?.let { it1 -> ContextCompat.getColorStateList(it1, baseColor) }
 
+                val idDrawable = House.getIcon(character.house.name)
+                val drawable = context?.let { it1 -> ContextCompat.getDrawable(it1, idDrawable) }
+                btnHouse.setImageDrawable(drawable)
             }
         }
         btnHouse.setOnClickListener{
             Toast.makeText(context, character?.house?.words, Toast.LENGTH_SHORT).show()
         }
-
-
     }
-
-
-
-
 }
