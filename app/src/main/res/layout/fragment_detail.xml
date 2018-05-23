@@ -4,61 +4,107 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
-<TextView
-    android:textSize="18sp"
-    android:textStyle="bold"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Personaje"/>
-<TextView
-    android:id="@+id/labelName"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="4dp"
-    tools:text="Jon Snow"/>
-<TextView
-    android:id="@+id/labelTitle"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="4dp"
-    android:textStyle="italic"
-    tools:text="Lord Comandante de la Guardia de la noche"/>
-<TextView
-    android:id="@+id/labelBorn"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="4dp"
-    tools:text="283 ac"/>
-<TextView
-    android:id="@+id/labelActor"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="4dp"
-    tools:text="Kit Harington"/>
-<TextView
-    android:id="@+id/labelQuote"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="4dp"
-    tools:text="I know nothing"/>
-<TextView
-    android:id="@+id/labelParents"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="4dp"
-    tools:text="Ned Stark"/>
-<TextView
-    android:id="@+id/labelSpouse"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="4dp"
-    tools:text="Sin esposa"/>
-<Button
-    android:id="@+id/button"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
-    tools:text="CASA STARK"/>
+    android:layout_height="match_parent">
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_weight="0.45"
+        android:layout_height="0dp">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/test"
+                android:scaleType="centerCrop"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/targaryenOverlay"/>
+
+            <TextView
+                android:id="@+id/labelName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/labelTitle"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:textColor="@android:color/white"
+                tools:text="Jon Snow" />
+            <TextView
+                android:id="@+id/labelTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                tools:text="Lord Commander of the Night´s Watch" />
+        </RelativeLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnHouse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            />
+
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="0.55"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personaje"/>
+
+        <TextView
+            android:id="@+id/labelBorn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            tools:text="283 ac"/>
+        <TextView
+            android:id="@+id/labelActor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            tools:text="Kit Harington"/>
+        <TextView
+            android:id="@+id/labelQuote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            tools:text="I know nothing"/>
+        <TextView
+            android:id="@+id/labelParents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            tools:text="Ned Stark"/>
+        <TextView
+            android:id="@+id/labelSpouse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            tools:text="Sin esposa"/>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            tools:text="CASA STARK"/>
+    </LinearLayout>
+
 </LinearLayout>
