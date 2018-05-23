@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import kotlinx.android.synthetic.main.fragment_detail.*
+import kotlinx.android.synthetic.main.header_character.*
+import kotlinx.android.synthetic.main.data_character.*
 
 //Tenemos que conectar fragment detail con detailfragment, tenemos que sobrescribir primero a onCreateView, e incfar la vista xml fragment_detail*******101
 class DetailFragment: Fragment() {
