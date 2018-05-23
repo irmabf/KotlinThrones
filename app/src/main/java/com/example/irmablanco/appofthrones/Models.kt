@@ -42,7 +42,7 @@ data class House(
 
         fun getBaseColor(houseId: String): Int {
             val pallete: Array<Int>? = colors.getOrDefault(houseId, DEFAULT_PALLETE)
-            return pallete!![0]
+            return pallete!![1]
         }
     }
 }
