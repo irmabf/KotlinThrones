@@ -2,6 +2,7 @@ package com.example.irmablanco.appofthrones
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,6 +48,12 @@ class DetailFragment: Fragment() {
                 labelParents.text = "${father} & ${mother}"
                 labelQuote.text = quote
                 labelSpouse.text = spouse
+                val overlayColor = House.getOverlayColor(character.house.name)
+                //los fragmentos estan ligados a contextos, luego getDrawable(context, colorid
+                imgOverlay.background = context?.let { it1 -> ContextCompat.getDrawable(it1, overlayColor) }
+
+                val baseColor = House.getBaseColor(character.house.name)
+                btnHouse.backgroundTintList = context?.let { it1 -> ContextCompat.getColorStateList(it1, baseColor) }
 
             }
         }

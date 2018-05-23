@@ -17,14 +17,15 @@
             android:layout_marginBottom="33dp">
 
             <ImageView
+                android:id="@+id/imgCharacter"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/test"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:src="@drawable/test"/>
             <View
+                android:id="@+id/imgOverlay"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/targaryenOverlay"/>
+                android:layout_height="match_parent"/>
 
             <TextView
                 android:id="@+id/labelName"
