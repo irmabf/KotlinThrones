@@ -1,0 +1,182 @@
+[
+  {
+    "id": "5872fe0f-34cc-4cd7-aa61-3bc534916a29",
+    "name": "Jon Snow",
+    "born": "283 AC",
+    "title": "Lord Comandante de la Guardia Nocturna",
+    "actor": "Kit Harington",
+    "quote": "Sometimes there Is no happy choice, only one less grievous than the others.",
+    "father": "Ned Stark",
+    "mother": "",
+    "spouse": "Soltero",
+    "img": "https://pmctvline2.files.wordpress.com/2016/02/game-of-thrones-jon-snow.jpg?w=620&h=420&crop=1",
+    "house": {
+      "name": "stark",
+      "region": "El Norte",
+      "words": "Winter is Coming",
+      "img": "https://ladygwynhyfvar.files.wordpress.com/2015/10/screen-shot-2015-10-25-at-9-49-12-am.png?w=500"
+    }
+  },
+  {
+    "id": "3ce000b8-2c91-11e8-b467-0ed5f89f718b",
+    "name": "Daenerys Targaryen",
+    "born": "282 AC",
+    "title": "Khaleesi de los Dohtraki",
+    "actor": "Emilia Clarke",
+    "quote": "Yes. All men must die, but we are not men.",
+    "father": "Aerys II Targaryen",
+    "mother": "Rhaella Targaryen",
+    "spouse": "Drogo",
+    "img": "https://philihappy.com/wp-content/uploads/2017/01/game-of-thrones-11-696x364.jpg",
+    "house": {
+      "name": "targaryen",
+      "region": "Tierras de la Corona",
+      "img": "https://cdn.jwplayer.com/thumbs/q0g74yP0-720.jpg",
+      "words": "Fire and Blood"
+    }
+  },
+  {
+    "id": "eb3e97f1-7c38-44a9-ac4e-f4b23d147c97",
+    "name": "Theon Greyjoy",
+    "born": "281 AC",
+    "title": "Capitán del Zorra Marina",
+    "actor": "Alfie Allen",
+    "quote": "Whatever my Queen commands.",
+    "father": "Balon Greyjoy",
+    "mother": "Alannys Harlaw",
+    "spouse": "",
+    "img": "https://vignette.wikia.nocookie.net/gameofthrones/images/5/5d/Theon_Greyjoy_bow.jpg/revision/latest?cb=20110318200120",
+    "house": {
+      "name": "greyjoy",
+      "region": "Las Islas de Acero",
+      "img": "https://vignette.wikia.nocookie.net/gameofthrones/images/9/9d/Pyke.jpg/revision/latest?cb=20120402161004",
+      "words": "We Do Not Sow"
+    }
+  },
+  {
+    "id": "bbefdd4a-f28c-4ddc-abfe-3dfba1abe331",
+    "name": "Robert I Baratheon",
+    "born": "298 AC",
+    "title": "Señor de Bastión de Tormentas",
+    "actor": "Mark Addy",
+    "quote": "There's a war coming, Ned. I don't know when, I don't know who we'll be fighting, but it's coming.",
+    "father": "Steffon Baratheon",
+    "mother": "Cassana Baratheon",
+    "spouse": "Cersei Lannister",
+    "img": "https://nerdist.com/wp-content/uploads/2017/09/robert-baratheon-970x545.jpg",
+    "house": {
+      "name": "baratheon",
+      "region": "Tierras de la Tormenta",
+      "img": "https://i.pinimg.com/originals/12/b7/25/12b725bab6439b2e3c7d72a10c5a68d2.jpg",
+      "words": "Our Is the Fury"
+    }
+  },
+  {
+    "id": "9be4c257-6e6c-49f7-89c8-70d2fdae3199",
+    "name": "Tyrion Lannister",
+    "born": "266 AC",
+    "title": "Consejero de la Moneda",
+    "actor": "Peter Dinklage",
+    "quote": "Everything's better with some wine in the belly",
+    "father": "Tywin Lannister",
+    "mother": "Joanna Lannister",
+    "spouse": "",
+    "img": "http://data1.ibtimes.co.in/cache-img-0-450/en/full/656446/1519030347_peter-dinklage-tyrion-lannister.jpg",
+    "house": {
+      "name": "lannister",
+      "region": "Tierras del Oeste",
+      "img": "https://vignette.wikia.nocookie.net/game-of-thrones-le-trone-de-fer/images/c/c1/Castralrock.png/revision/latest?cb=20170731100820&path-prefix=fr",
+      "words": "Hear Me Roar!"
+    }
+  },
+  {
+    "id": "429bb877-5d44-4d99-8524-7f05a784105b",
+    "name": "Margaery Tyrell",
+    "born": "283 AC",
+    "title": "Reina",
+    "actor": "Natalie Dormer",
+    "quote": "I want to be the Queen.",
+    "father": "Mace Tyrell",
+    "mother": "Alerie Tyrell",
+    "spouse": "Renly Baratheon",
+    "img": "https://imagesvc.timeincapp.com/v3/fan/image?url=https%3A%2F%2Fwinteriscoming.net%2Ffiles%2F2016%2F08%2Fmargaery-tyrell-season-6.jpg&c=sc&w=850&h=560",
+    "house": {
+      "name": "tyrell",
+      "region": "Altojardín",
+      "img": "https://i.pinimg.com/originals/9a/64/19/9a64194887447912ad82c689d0dcb95e.jpg",
+      "words": "Growing Strong"
+    }
+  },
+  {
+    "id": "c902e588-fcca-4e1a-9cc9-487c86d2ea96",
+    "name": "Robin Arryn",
+    "born": "289 AC",
+    "title": "Señor del Nido de Águilas",
+    "actor": "Lino Facioli",
+    "quote": "Mummy, I want to see the bad man fly.",
+    "father": "Jon Arryn",
+    "mother": "Alerie Tyrell",
+    "spouse": "Lysa Arryn",
+    "img": "http://highlighthollywood.com/wp-content/uploads/2015/12/robyn-lordofthevale.jpg",
+    "house": {
+      "name": "arryn",
+      "region": "Valle de Arryn",
+      "img": "http://images5.fanpop.com/image/photos/30600000/concept-art-game-of-thrones-30632143-500-322.jpg",
+      "words": "As High as Honor"
+    }
+  },
+  {
+    "id": "802a258c-6951-49f5-9159-a141993a8058",
+    "name": "Oberyn Martell",
+    "born": "258 AC",
+    "title": "Príncipe de Dorne",
+    "actor": "Pedro Pascal",
+    "quote": "May I tell you a secret? You're not a golden lion. You're just a pink little man who's far too slow on the draw.",
+    "father": "?",
+    "mother": "?",
+    "spouse": "Ellaria Sand",
+    "img": "https://cdn.jwplayer.com/thumbs/YD6hxZEK-720.jpg",
+    "house": {
+      "name": "martell",
+      "region": "Dorne",
+      "img": "https://1v1d1e1lmiki1lgcvx32p49h8fe-wpengine.netdna-ssl.com/wp-content/uploads/2015/04/alcazar-game-of-thrones-seville-740x385.jpg",
+      "words": "Unbowed, Unbent, Unbroken"
+    }
+  },
+  {
+    "id": "94aa6895-45e9-4a4e-a951-98d2cae78900",
+    "name": "Walder Frey",
+    "born": "208 AC",
+    "title": "Señor de los Gemelos",
+    "actor": "David Bradley",
+    "quote": "Stark, Tully, Lannister, Baratheon... Give me one good reason why I should waste a single thought on any of you.",
+    "father": "?",
+    "mother": "?",
+    "spouse": "Siete esposas",
+    "img": "https://cdn.images.express.co.uk/img/dynamic/20/590x/got-597352.jpg",
+    "house": {
+      "name": "frey",
+      "region": "Tierra de los Ríos",
+      "img": "https://vignette.wikia.nocookie.net/ironthronerp/images/1/19/Bitterbridge.jpg/revision/latest?cb=20160117030721",
+      "words": "We Stand Together"
+    }
+  },
+  {
+    "id": "5b3892b7-dc39-40c7-a8f8-f94bc474e19f",
+    "name": "Brynden Tully",
+    "born": "240 AC",
+    "title": "Guardian de las Marcas del Sur",
+    "actor": "Clive Rusell",
+    "quote": "Even in war's darkest days, in most places in the world absolutely nothing is happening.",
+    "father": "?",
+    "mother": "?",
+    "spouse": "",
+    "img": "https://cdn.jwplayer.com/thumbs/3Gz5D0sR-720.jpg",
+    "house": {
+      "name": "tully",
+      "region": "Tierra de los Ríos",
+      "img": "https://throneslife.files.wordpress.com/2013/06/riverrun.jpg",
+      "words": "Family, Duty, Honor"
+    }
+  }
+]

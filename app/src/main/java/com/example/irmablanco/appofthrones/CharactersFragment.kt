@@ -59,10 +59,26 @@ class CharactersFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         list.adapter = adapter
-        val characters: MutableList<Character> = CharactersRepo.character
-        adapter.setCharacters(characters)
+
+
     }
 
+    override fun onResume() {
+        super.onResume()
+        requestCharacters()
+    }
+    private fun requestCharacters() {
+        context?.let {
+            CharactersRepo.requestCharacters(it,
+                { characters ->
+                    adapter.setCharacters(characters)
+
+                },
+                {
+
+                })
+        }
+    }
 
     //Aquí definimos una especie de protocolo, un comportamiento que una clase puede implementar
     //este comportamiento sera implementado por la clase CharactersActivity
